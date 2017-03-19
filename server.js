@@ -39,8 +39,7 @@ app.get('/people', function(req, res){
 
 app.get('/people/:id', function(req, res){
   console.log('in get /people/#');
-  db.get("SELECT * FROM people WHERE rowid = ?", 1, function(err, rows){
-    console.log('fetching all people in db...');
+  db.get("SELECT * FROM people WHERE rowid = ?", req.params.id, function(err, rows){
     res.json(rows)
   })
 })
