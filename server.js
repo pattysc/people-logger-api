@@ -37,6 +37,14 @@ app.get('/people', function(req, res){
   })
 })
 
+app.get('/people/:id', function(req, res){
+  console.log('in get /people/#');
+  db.get("SELECT * FROM people WHERE rowid = ?", 1, function(err, rows){
+    console.log('fetching all people in db...');
+    res.json(rows)
+  })
+})
+
 app.post('/people', function(req, res){
   console.log('in /people')
   console.log(req.body);
