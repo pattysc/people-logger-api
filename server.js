@@ -35,4 +35,8 @@ app.patch('/people/:id', function(req, res){
   db.run("UPDATE people SET name = ?, favoriteCity = ? WHERE rowid = ?", req.body.name, req.body.favoriteCity, req.params.id)
 })
 
+app.delete('/people/:id', function(req, res){
+  db.run("DELETE FROM table_name WHERE rowid = ?", req.params.id)
+})
+
 app.listen(port)
