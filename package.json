@@ -1,7 +1,7 @@
 {
   "name": "spotify_ttp",
   "version": "1.0.0",
-  "description": "take home challenge: make an api for users",
+  "description": "make an api for people-logger.herokuapp.com",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.17.1",
