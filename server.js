@@ -50,6 +50,12 @@ app.post('/people', function(req, res){
   db.run("INSERT INTO people (name, favoriteCity) VALUES (?, ?)", req.body.name, req.body.favoriteCity)
 })
 
+app.patch('/people/:id', function(req, res){
+  console.log('in edit /people/#')
+  console.log(req.body);
+  db.run("UPDATE people SET name = ?, favoriteCity = ? WHERE rowid = ?", req.body.name, req.body.favoriteCity, req.params.id)
+})
+
 // app.get('/make', function(req, res){
 //   console.log('in /make get');
 //   let ids = req.query.ids
