@@ -40,7 +40,9 @@ app.get('/people', function(req, res){
 app.post('/people', function(req, res){
   console.log('in /people')
   console.log(req.body);
-  db.run("INSERT INTO people (name, favoriteCity) VALUES (?, ?)", req.body.name, req.body.favoriteCity)
+  db.run("INSERT INTO people (name, favoriteCity) VALUES (?, ?)", req.body.name, req.body.favoriteCity, function(){
+    res.json({saved: success})
+  })
 })
 
 // app.get('/make', function(req, res){
