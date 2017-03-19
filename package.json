@@ -1,0 +1,19 @@
+{
+  "name": "spotify_ttp",
+  "version": "1.0.0",
+  "description": "take home challenge: make an api for users",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.1",
+    "express": "^4.15.2",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
