@@ -12,7 +12,6 @@ app.use(bodyParser.json())
 
 db.serialize(function() {
   db.run("CREATE TABLE IF NOT EXISTS people (rowid integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, favoriteCity text NOT NULL)");
-  db.run("INSERT INTO people (name, favoriteCity) VALUES ('Oscar', 'NYC')");
 })
 
 app.get('/people', function(req, res){
