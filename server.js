@@ -14,7 +14,7 @@ db.serialize(function() {
   db.run("CREATE TABLE IF NOT EXISTS people (rowid integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, favoriteCity text NOT NULL)");
 })
 
-//get all people logged
+//get all the people logged in the db
 app.get('/people', function(req, res){
   db.all("SELECT * FROM people", function(err, rows){
     res.json(rows)
